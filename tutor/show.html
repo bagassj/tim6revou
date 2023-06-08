@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contoh Menampilkan dan Menghide Elemen</title>
+    <style>
+        #element-to-show-hide {
+        display: none; /* Elemen akan disembunyikan secara default */
+        }
+    </style>
+</head>
+<body>
+    <h1>Contoh Menampilkan dan Menghide Elemen</h1>
+
+    <input type="radio" id="radio-show" name="show-hide" /> Tampilkan
+    <br />
+    <input type="radio" id="radio-hide" name="show-hide" /> Sembunyikan
+
+    <div id="element-to-show-hide">
+        <!-- Konten elemen yang akan ditampilkan atau disembunyikan -->
+        <p>Ini adalah elemen yang akan ditampilkan atau disembunyikan.</p>
+    </div>
+    <div id="element-to-show-hide">
+        <!-- Konten elemen yang akan ditampilkan atau disembunyikan -->
+        <p>Ini adalah elemen yang akan ditampilkan atau disembunyikan.</p>
+    </div>
+
+    <script>
+        var radioShow = document.getElementById("radio-show");
+        var radioHide = document.getElementById("radio-hide");
+        var elementToShowHide = document.getElementById("element-to-show-hide");
+
+        // Menambahkan event listener pada radio button
+        radioShow.addEventListener("click", function() {
+            elementToShowHide.style.display = "block"; // Menampilkan elemen
+        });
+
+        radioHide.addEventListener("click", function() {
+            elementToShowHide.style.display = "none"; // Menyembunyikan elemen
+        });
+    </script>
+</body>
+</html>
