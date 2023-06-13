@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
+<body class="scroll-style">
     <div class="container-fluid">
         <div class="row flex-nowrap">
             <div class="sidebar col-auto d-flex flex-column flex-shrink-0 p-3 bg-white text-dark">
@@ -169,13 +169,13 @@
                                 </div>
                             </li>
                         </ul>
-                        <button class="btn btn-primary rounded-pill text-nowrap" type="button"><i class="bi bi-plus-circle"></i><small> Add Post</small></button>
+                        <button class="btn btn-primary rounded-pill text-nowrap" type="button" data-bs-toggle="modal" data-bs-target="#addPostModal"><i class="bi bi-plus-circle"></i><small> Add Post</small></button>
                     </div>
                 </nav>
                 <div class="image-gallery mt-2">
                     <div class="column">
                         <div class="image-item" id="">
-                            <img class="post-img" src="https://source.unsplash.com/UkrEP201nQI" />
+                            <img class="post-img" src="https://source.unsplash.com/UkrEP201nQI" data-bs-toggle="modal" data-bs-target="#postModal"/>
                             <div class="overlay py-2 px-2">
                                 <div class="row g-0 w-100">
                                     <div class="col-8 mr-auto">
@@ -459,7 +459,7 @@
                     <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
                 </div>
                 <div class="toast-body bg-light d-flex flex-column">
-                    <div class="chat-text d-flex align-items-start flex-wrap">
+                    <div class="chat-text d-flex align-items-start flex-wrap scroll-style">
                         <p class="bg-primary rounded-pill text-light py-1 px-3 me-auto">Hello, world! This is a toast message.</p>
                         <p class="bg-light border rounded-pill py-1 px-3 ms-auto">Hello, world! This is a toast message.</p>
                         <p class="bg-primary rounded-pill text-light py-1 px-3 me-auto">Hello, world! This is a toast message.</p>
@@ -476,6 +476,141 @@
                     </div>
                     
                 </div>
+            </div>
+        </div>
+        <div class="modal modal-lg fade scroll-style" id="postModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-7">
+                                <img class="w-100 rounded" src="https://source.unsplash.com/UkrEP201nQI"/>
+                            </div>
+                            <div class="col-5 d-flex flex-column">
+                                <div class="p-0 align-items-center">
+                                    <img src="https://source.unsplash.com/Cb5A-Pgetl8" class="rounded-circle me-2" alt="..." width="32" height="32">
+                                    <strong>Tim 9</strong>
+                                    <p class="py-2">
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi eum, voluptatum, quasi numquam est architecto error qui labore fugiat adipisci explicabo omnis incidunt reiciendis, aliquam saepe doloremque eius nihil inventore.
+                                    </p>
+                                    <!-- <hr> -->
+                                </div>
+                                <div class="flex-fill overflow-y-auto overflow-x-hidden comment-section scroll-style">
+                                    <div class="d-flex text-muted align-items-center">
+                                        <img class="bd-placeholder-img flex-shrink-0 me-2 rounded-circle" src="https://source.unsplash.com/Cb5A-Pgetl8" alt="" width="32" height="32" style="object-fit: cover;">
+                                        <p class="my-auto small">
+                                            <strong class="text-gray-dark">Tim 7</strong>
+                                            Halo bro.
+                                        </p>
+                                    </div>
+                                    <div class="d-flex text-muted align-items-start mt-2">
+                                        <img class="bd-placeholder-img flex-shrink-0 me-2 rounded-circle" src="https://source.unsplash.com/Cb5A-Pgetl8" alt="" width="32" height="32" style="object-fit: cover;">
+                                        <p class="my-auto small text-wrap">
+                                            <strong class="text-gray-dark">Tim 7</strong>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi eum, voluptatum, quasi numquam est architecto error qui labore
+                                        </p>
+                                    </div>
+                                    <div class="d-flex text-muted align-items-start mt-2">
+                                        <img class="bd-placeholder-img flex-shrink-0 me-2 rounded-circle" src="https://source.unsplash.com/Cb5A-Pgetl8" alt="" width="32" height="32" style="object-fit: cover;">
+                                        <p class="my-auto small text-wrap">
+                                            <strong class="text-gray-dark">Tim 7</strong>
+                                            Test doang
+                                        </p>
+                                    </div>
+                                    <div class="d-flex text-muted align-items-start mt-2">
+                                        <img class="bd-placeholder-img flex-shrink-0 me-2 rounded-circle" src="https://source.unsplash.com/Cb5A-Pgetl8" alt="" width="32" height="32" style="object-fit: cover;">
+                                        <p class="my-auto small text-wrap">
+                                            <strong class="text-gray-dark">Tim 7</strong>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi eum, voluptatum, quasi numquam est architecto error qui labore
+                                        </p>
+                                    </div>
+                                    <div class="d-flex text-muted align-items-start mt-2">
+                                        <img class="bd-placeholder-img flex-shrink-0 me-2 rounded-circle" src="https://source.unsplash.com/Cb5A-Pgetl8" alt="" width="32" height="32" style="object-fit: cover;">
+                                        <p class="my-auto small text-wrap">
+                                            <strong class="text-gray-dark">Tim 7</strong>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi eum, voluptatum, quasi numquam est architecto error qui labore
+                                        </p>
+                                    </div>
+                                    <div class="d-flex text-muted align-items-start mt-2">
+                                        <img class="bd-placeholder-img flex-shrink-0 me-2 rounded-circle" src="https://source.unsplash.com/Cb5A-Pgetl8" alt="" width="32" height="32" style="object-fit: cover;">
+                                        <p class="my-auto small text-wrap">
+                                            <strong class="text-gray-dark">Tim 7</strong>
+                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi eum, voluptatum, quasi numquam est architecto error qui labore
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="my-3 row g-0">
+                                    <!-- <hr> -->
+                                    <div class="col-5">
+                                        <i class="bi bi-heart"></i>
+                                        <small>120</small>
+                                        
+                                        <i class="bi bi-chat ms-3"></i>
+                                        <small>150</small>
+                                    </div>
+                                    <div class="col-7 text-end">
+                                        <i class="bi bi-three-dots-vertical"></i>
+                                    </div>
+                                </div>
+                                <div class="input-group input-group-sm mt-auto">
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Type here....">
+                                    <span class="input-group-text">Send</span>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="addPostModal" aria-hidden="true" aria-labelledby="addPostModal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header w-100">
+                        <h1 class="modal-title fs-5 text-center w-100" id="addPostModal">Buat Postingan Baru</h1>
+                    </div>
+                    <div class="modal-body d-flex align-items-center justify-content-center flex-column">
+                        <div class="my-5 py-5 d-flex align-items-center justify-content-center flex-column">
+                            <h1 class="d-block text-gray-dark fs-1"><i class="bi bi-images fs-1"></i></h1>
+                            <span class="fs-5">Seret foto dan video kesini</span>
+                        </div>
+                        <button class="btn btn-primary mt-3" data-bs-target="#addPostModal2" data-bs-toggle="modal">Pilih dari komputer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="addPostModal2" aria-hidden="true" aria-labelledby="addPostModal2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 text-center w-100" id="addPostModal">Buat Postingan Baru</h1>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <img class="w-100 rounded" src="https://source.unsplash.com/UkrEP201nQI"/>
+                        </div>
+                        <div class="col-6 d-flex flex-column">
+                            <div class="p-0 align-items-center">
+                                <img src="https://source.unsplash.com/Cb5A-Pgetl8" class="rounded-circle me-2" alt="..." width="32" height="32">
+                                <strong>Tim 9</strong>
+                                <!-- <hr> -->
+                            </div>
+                            <div class="flex-fill my-3">
+                                <textarea class="form-control border-0 border-bottom rounded-0 h-75" placeholder="Add caption here..." id="floatingTextarea2" ></textarea>
+                                <select class="form-select my-2" aria-label="Default select example">
+                                    <option selected>Category</option>
+                                    <option value="1">Nature</option>
+                                    <option value="2">Person</option>
+                                    <option value="3">Animal</option>
+                                </select>
+                            </div>
+                            <div class="d-grid mt-auto">
+                                <button class="btn btn-primary mt-3" data-bs-dismiss="modal">Upload</button>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+              </div>
             </div>
         </div>
     </div>
