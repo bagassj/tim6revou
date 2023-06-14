@@ -44,25 +44,25 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link active" aria-current="page">
+                        <a href="index.html" class="nav-link active" aria-current="page">
                             <i class="bi bi-house-door me-2"></i>
                             Home
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link text-dark">
+                        <a href="explore.html" class="nav-link text-dark">
                             <i class="bi bi-globe me-2"></i>
                             Explore
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link text-dark">
+                        <a href="profile.html" class="nav-link text-dark">
                             <i class="bi bi-person-circle me-2"></i>
                             Profile
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link text-dark">
+                        <a href="settings.html" class="nav-link text-dark">
                             <i class="bi bi-gear me-2"></i>
                             Settings
                         </a>
@@ -79,17 +79,9 @@
                 </ul>
             </div>
             <div class="col feed-container bg-light py-2">
-                <nav class="navbar navbar-expand-lg px-5">
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <div class="input-group border rounded-pill bg-white">
-                            <a class="text-dark" id="toSearch" href="search.html">
-                                <span class="input-group-text border border-0 rounded-pill bg-white" id="basic-addon1">
-                                    <i class="bi bi-search"></i>
-                                </span>
-                            </a>
-                            <input type="text" class="form-control border border-0 rounded-pill" id="search" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
-                        </div>
-                        <ul class="navbar-nav mx-4">
+                <nav class="navbar navbar-expand-lg px-2">
+                    <div class="collapse navbar-collapse d-flex align-items-end justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav py-auto">
                             <li class="nav-item">
                                 <div class="dropdown">
                                     <button class="btn btn-link text-decoration-none text-dark position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -140,7 +132,7 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item py-auto">
                                 <div class="dropdown">
                                     <button class="btn btn-link text-decoration-none text-dark" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="bi bi-send fs-5"></i>
@@ -170,8 +162,10 @@
                                     </ul>
                                 </div>
                             </li>
+                            <li class="nav-item py-auto ms-4">
+                                <button class="btn btn-primary rounded-pill text-nowrap py-auto" type="button" data-bs-toggle="modal" data-bs-target="#addPostModal"><i class="bi bi-plus-circle"></i><small> Add Post</small></button>
+                            </li>
                         </ul>
-                        <button class="btn btn-primary rounded-pill text-nowrap" type="button" data-bs-toggle="modal" data-bs-target="#addPostModal"><i class="bi bi-plus-circle"></i><small> Add Post</small></button>
                     </div>
                 </nav>
                 <div class="image-gallery mt-2">
@@ -568,14 +562,14 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header w-100">
-                        <h1 class="modal-title fs-5 text-center w-100" id="addPostModal">Buat Postingan Baru</h1>
+                        <h1 class="modal-title fs-5 text-center w-100" id="addPostModal">Create a New Post</h1>
                     </div>
                     <div class="modal-body d-flex align-items-center justify-content-center flex-column">
                         <div class="my-5 py-5 d-flex align-items-center justify-content-center flex-column">
                             <h1 class="d-block text-gray-dark fs-1"><i class="bi bi-images fs-1"></i></h1>
-                            <span class="fs-5">Seret foto dan video kesini</span>
+                            <span class="fs-5">Drag photos or videos here</span>
                         </div>
-                        <button class="btn btn-primary mt-3" data-bs-target="#addPostModal2" data-bs-toggle="modal">Pilih dari komputer</button>
+                        <button class="btn btn-primary mt-3" data-bs-target="#addPostModal2" data-bs-toggle="modal">Choose from file</button>
                     </div>
                 </div>
             </div>
@@ -584,7 +578,7 @@
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5 text-center w-100" id="addPostModal">Buat Postingan Baru</h1>
+                    <h1 class="modal-title fs-5 text-center w-100" id="addPostModal">Create a New Post</h1>
                 </div>
                 <div class="modal-body">
                     <div class="row">
@@ -597,13 +591,16 @@
                                 <strong>Tim 9</strong>
                             </div>
                             <div class="flex-fill my-3">
-                                <textarea class="form-control border-0 border-bottom rounded-0 h-75" placeholder="Add caption here..." id="floatingTextarea2" ></textarea>
-                                <select class="form-select my-2" aria-label="Default select example">
-                                    <option selected>Category</option>
-                                    <option value="1">Nature</option>
-                                    <option value="2">Person</option>
-                                    <option value="3">Animal</option>
-                                </select>
+                                <textarea class="form-control rounded-2 h-75" placeholder="Add caption here..." id="floatingTextarea2" ></textarea>
+                                <div class="input-group input-group-sm mt-2">
+                                    <span class="input-group-text bg-primary text-white" id="inputGroup-sizing-sm">Category</span>
+                                    <select class="form-select">
+                                        <option disabled selected hidden></option>
+                                        <option value="1">Nature</option>
+                                        <option value="2">Person</option>
+                                        <option value="3">Animal</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="d-grid mt-auto">
                                 <button class="btn btn-primary mt-3" data-bs-dismiss="modal">Upload</button>
@@ -629,15 +626,5 @@
             toastBootstrap.show()
         })
     }
-</script>
-<script>
-    var input = document.getElementById("search");
-
-    input.addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
-        event.preventDefault();
-        document.getElementById("toSearch").click();
-    }
-    });
 </script>
 </html>

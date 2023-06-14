@@ -44,25 +44,25 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link active" aria-current="page">
+                        <a href="index.html" class="nav-link text-dark" aria-current="page">
                             <i class="bi bi-house-door me-2"></i>
                             Home
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link text-dark">
+                        <a href="explore.html" class="nav-link active">
                             <i class="bi bi-globe me-2"></i>
                             Explore
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link text-dark">
+                        <a href="profile.html" class="nav-link text-dark">
                             <i class="bi bi-person-circle me-2"></i>
                             Profile
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link text-dark">
+                        <a href="settings.html" class="nav-link text-dark">
                             <i class="bi bi-gear me-2"></i>
                             Settings
                         </a>
@@ -79,7 +79,7 @@
                 </ul>
             </div>
             <div class="col feed-container bg-light py-2">
-                <nav class="navbar navbar-expand-lg px-5">
+                <nav class="navbar navbar-expand-lg px-5 pb-0">
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <div class="input-group border rounded-pill bg-white">
                             <a class="text-dark" id="toSearch" href="search.html">
@@ -87,7 +87,7 @@
                                     <i class="bi bi-search"></i>
                                 </span>
                             </a>
-                            <input type="text" class="form-control border border-0 rounded-pill" id="search" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control border border-0 rounded-pill" id="searchInput" onkeyup="myFunction()" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
                         </div>
                         <ul class="navbar-nav mx-4">
                             <li class="nav-item">
@@ -174,17 +174,18 @@
                         <button class="btn btn-primary rounded-pill text-nowrap" type="button" data-bs-toggle="modal" data-bs-target="#addPostModal"><i class="bi bi-plus-circle"></i><small> Add Post</small></button>
                     </div>
                 </nav>
-                <div class="filter-post mb-3 d-flex align-items-center justify-content-center">
-                    <button type="button" class="btn btn-outline-secondary btn-sm rounded-pill mx-2" data-bs-toggle="modal" data-bs-target="#accountsModal">Accounts</button>
-                    <button type="button" class="btn btn-outline-secondary btn-sm rounded-pill mx-2" id="BtnAll">All</button>
-                    <button type="button" class="btn btn-outline-secondary btn-sm rounded-pill mx-2" id="BtnTravel">Travels</button>
-                    <button type="button" class="btn btn-outline-secondary btn-sm rounded-pill mx-2" id="BtnAnimals">Animals</button>
-                    <button type="button" class="btn btn-outline-secondary btn-sm rounded-pill mx-2" id="BtnFilm">Film</button>
-                    <button type="button" class="btn btn-outline-secondary btn-sm rounded-pill mx-2" id="BtnNature">Nature</button>
+                <div class="filter-post d-flex align-items-center justify-content-center my-3">
+                    <button type="button" class="btn btn-outline-secondary btn-sm rounded-pill mx-1" id="BtnAll">All</button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm rounded-pill mx-1" data-bs-toggle="modal" data-bs-target="#accountsModal">Accounts</button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm rounded-pill mx-1" id="BtnTravel">Travels</button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm rounded-pill mx-1" id="BtnAnimals">Animals</button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm rounded-pill mx-1" id="BtnFilm">Film</button>
+                    <button type="button" class="btn btn-outline-secondary btn-sm rounded-pill mx-1" id="BtnNature">Nature</button>
                 </div>
-                <div class="image-gallery mt-2">
+                <div class="image-gallery">
                     <div class="column">
                         <div class="image-item travel">
+                            <small class="d-none">city</small>
                             <img class="post-img" src="https://source.unsplash.com/ByIRk0OjYbo"/>
                             <div class="overlay py-2 px-2">
                                 <div class="row g-0 w-100">
@@ -204,6 +205,7 @@
                             </div>
                         </div>
                         <div class="image-item travel">
+                            <small class="d-none">fyp</small>
                             <img class="post-img" src="https://source.unsplash.com/XnAclelyoro" />
                             <div class="overlay py-2 px-2">
                                 <div class="row g-0 w-100">
@@ -223,6 +225,7 @@
                             </div>
                         </div>
                         <div class="image-item animals">
+                            <small class="d-none">fyp</small>
                             <img class="post-img" src="https://source.unsplash.com/4IYbykQnR1Y" />
                             <div class="overlay py-2 px-2">
                                 <div class="row g-0 w-100">
@@ -242,6 +245,7 @@
                             </div>
                         </div>
                         <div class="image-item film">
+                            <small class="d-none">fyp</small>
                             <img class="post-img" src="https://source.unsplash.com/6I-LdDdoc68" />
                             <div class="overlay py-2 px-2">
                                 <div class="row g-0 w-100">
@@ -261,6 +265,7 @@
                             </div>
                         </div>
                         <div class="image-item nature">
+                            <small class="d-none">fyp</small>
                             <img class="post-img" src="https://source.unsplash.com/qCR_bpofKjE" />
                             <div class="overlay py-2 px-2">
                                 <div class="row g-0 w-100">
@@ -282,6 +287,7 @@
                     </div>
                     <div class="column">
                         <div class="image-item nature">
+                            <small class="d-none">fyp</small>
                             <img class="post-img" src="https://source.unsplash.com/d2ENHeTqKoc" />
                             <div class="overlay py-2 px-2">
                                 <div class="row g-0 w-100">
@@ -301,6 +307,7 @@
                             </div>
                         </div>
                         <div class="image-item film">
+                            <small class="d-none">city</small>
                             <img class="post-img" src="https://source.unsplash.com/lrSxrgLC5TY" />
                             <div class="overlay py-2 px-2">
                                 <div class="row g-0 w-100">
@@ -320,6 +327,7 @@
                             </div>
                         </div>
                         <div class="image-item animals">
+                            <small class="d-none">fyp</small>
                             <img class="post-img" src="https://source.unsplash.com/_9a-3NO5KJE" />
                             <div class="overlay py-2 px-2">
                                 <div class="row g-0 w-100">
@@ -339,6 +347,7 @@
                             </div>
                         </div>
                         <div class="image-item travel">
+                            <small class="d-none">city</small>
                             <img class="post-img" src="https://source.unsplash.com/sMEmNI_rjxo" />
                             <div class="overlay py-2 px-2">
                                 <div class="row g-0 w-100">
@@ -358,6 +367,7 @@
                             </div>
                         </div>
                         <div class="image-item animals">
+                            <small class="d-none">fyp</small>
                             <img class="post-img" src="https://source.unsplash.com/oU6KZTXhuvk" />
                             <div class="overlay py-2 px-2">
                                 <div class="row g-0 w-100">
@@ -377,7 +387,8 @@
                             </div>
                         </div>
                         <div class="image-item film">
-                            <img class="post-img" src="https://source.unsplash.com/Nmrkl-bU52g" />
+                            <small class="d-none">city</small>
+                            <img class="post-img" src="https://source.unsplash.com/LVCD5_ttGvM" />
                             <div class="overlay py-2 px-2">
                                 <div class="row g-0 w-100">
                                     <div class="col-8 mr-auto">
@@ -396,6 +407,7 @@
                             </div>
                         </div>
                         <div class="image-item nature">
+                            <small class="d-none">fyp</small>
                             <img class="post-img" src="https://source.unsplash.com/gtiG75hYAn0" />
                             <div class="overlay py-2 px-2">
                                 <div class="row g-0 w-100">
@@ -417,7 +429,8 @@
                     </div>
                     <div class="column">
                         <div class="image-item film">
-                            <img class="post-img" src="https://source.unsplash.com/Nmrkl-bU52g" />
+                            <small class="d-none">city</small>
+                            <img class="post-img" src="https://source.unsplash.com/ZYnjSc83lLM" />
                             <div class="overlay py-2 px-2">
                                 <div class="row g-0 w-100">
                                     <div class="col-8 mr-auto">
@@ -436,6 +449,7 @@
                             </div>
                         </div>
                         <div class="image-item animals">
+                            <small class="d-none">fyp</small>
                             <img class="post-img" src="https://source.unsplash.com/xUUZcpQlqpM" />
                             <div class="overlay py-2 px-2">
                                 <div class="row g-0 w-100">
@@ -455,6 +469,7 @@
                             </div>
                         </div>
                         <div class="image-item animals">
+                            <small class="d-none">fyp</small>
                             <img class="post-img" src="https://source.unsplash.com/D6TqIa-tWRY" />
                             <div class="overlay py-2 px-2">
                                 <div class="row g-0 w-100">
@@ -474,6 +489,7 @@
                             </div>
                         </div>
                         <div class="image-item travel">
+                            <small class="d-none">fyp</small>
                             <img class="post-img" src="https://source.unsplash.com/XnAclelyoro" />
                             <div class="overlay py-2 px-2">
                                 <div class="row g-0 w-100">
@@ -493,6 +509,7 @@
                             </div>
                         </div>
                         <div class="image-item nature">
+                            <small class="d-none">fyp</small>
                             <img class="post-img" src="https://source.unsplash.com/ovrnSYR7U2s" />
                             <div class="overlay py-2 px-2">
                                 <div class="row g-0 w-100">
@@ -514,6 +531,7 @@
                     </div>
                     <div class="column">
                         <div class="image-item nature">
+                            <small class="d-none">fyp</small>
                             <img class="post-img" src="https://source.unsplash.com/cGkOtoci01s" />
                             <div class="overlay py-2 px-2">
                                 <div class="row g-0 w-100">
@@ -533,6 +551,7 @@
                             </div>
                         </div>
                         <div class="image-item film">
+                            <small class="d-none">fyp</small>
                             <img class="post-img" src="https://source.unsplash.com/kL7qb_Uls-c" />
                             <div class="overlay py-2 px-2">
                                 <div class="row g-0 w-100">
@@ -552,7 +571,8 @@
                             </div>
                         </div>
                         <div class="image-item animals">
-                            <img class="post-img" src="https://source.unsplash.com/D6TqIa-tWRY" />
+                            <small class="d-none">fyp</small>
+                            <img class="post-img" src="https://source.unsplash.com/wTPp323zAEw" />
                             <div class="overlay py-2 px-2">
                                 <div class="row g-0 w-100">
                                     <div class="col-8 mr-auto">
@@ -571,7 +591,28 @@
                             </div>
                         </div>
                         <div class="image-item travel">
+                            <small class="d-none">city</small>
                             <img class="post-img" src="https://source.unsplash.com/BgFDQ70OHW0" />
+                            <div class="overlay py-2 px-2">
+                                <div class="row g-0 w-100">
+                                    <div class="col-8 mr-auto">
+                                        <img class="profile-img rounded-circle" src="https://source.unsplash.com/VWcPlbHglYc" alt="" width="20" height="20">
+                                        <span class="ms-1">Joko</span>
+                                    </div>
+                                    <div class="col-2 text-end">
+                                        <i class="bi bi-heart text-end"></i>
+                                        <span class="text-end"> 132</span>
+                                    </div>
+                                    <div class="col-2 text-end">
+                                        <i class="bi bi-chat text-end"></i>
+                                        <span class="text-end"> 12</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="image-item animals">
+                            <small class="d-none">city</small>
+                            <img class="post-img" src="https://source.unsplash.com/bKhETeDV1WM" />
                             <div class="overlay py-2 px-2">
                                 <div class="row g-0 w-100">
                                     <div class="col-8 mr-auto">
@@ -625,14 +666,14 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header w-100">
-                        <h1 class="modal-title fs-5 text-center w-100" id="addPostModal">Buat Postingan Baru</h1>
+                        <h1 class="modal-title fs-5 text-center w-100" id="addPostModal">Create a New Post</h1>
                     </div>
                     <div class="modal-body d-flex align-items-center justify-content-center flex-column">
                         <div class="my-5 py-5 d-flex align-items-center justify-content-center flex-column">
                             <h1 class="d-block text-gray-dark fs-1"><i class="bi bi-images fs-1"></i></h1>
-                            <span class="fs-5">Seret foto dan video kesini</span>
+                            <span class="fs-5">Drag photos or videos here</span>
                         </div>
-                        <button class="btn btn-primary mt-3" data-bs-target="#addPostModal2" data-bs-toggle="modal">Pilih dari komputer</button>
+                        <button class="btn btn-primary mt-3" data-bs-target="#addPostModal2" data-bs-toggle="modal">Choose from file</button>
                     </div>
                 </div>
             </div>
@@ -641,7 +682,7 @@
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5 text-center w-100" id="addPostModal">Buat Postingan Baru</h1>
+                    <h1 class="modal-title fs-5 text-center w-100" id="addPostModal">Create a New Post</h1>
                 </div>
                 <div class="modal-body">
                     <div class="row">
@@ -654,13 +695,16 @@
                                 <strong>Tim 9</strong>
                             </div>
                             <div class="flex-fill my-3">
-                                <textarea class="form-control border-0 border-bottom rounded-0 h-75" placeholder="Add caption here..." id="floatingTextarea2" ></textarea>
-                                <select class="form-select my-2" aria-label="Default select example">
-                                    <option selected>Category</option>
-                                    <option value="1">Nature</option>
-                                    <option value="2">Person</option>
-                                    <option value="3">Animal</option>
-                                </select>
+                                <textarea class="form-control rounded-2 h-75" placeholder="Add caption here..." id="floatingTextarea2" ></textarea>
+                                <div class="input-group input-group-sm mt-2">
+                                    <span class="input-group-text bg-primary text-white" id="inputGroup-sizing-sm">Category</span>
+                                    <select class="form-select">
+                                        <option disabled selected hidden></option>
+                                        <option value="1">Nature</option>
+                                        <option value="2">Person</option>
+                                        <option value="3">Animal</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="d-grid mt-auto">
                                 <button class="btn btn-primary mt-3" data-bs-dismiss="modal">Upload</button>
@@ -675,7 +719,7 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header w-100">
-                        <h1 class="modal-title fs-6 text-center w-100" id="accountsModal">Orang yang mungkin anda cari</h1>
+                        <h1 class="modal-title fs-6 text-center w-100" id="accountsModal">People you might be looking for</h1>
                     </div>
                     <div class="modal-body d-flex align-items-center justify-content-center flex-column w-100 px-0">
                         <ul class="list-group border-0 p-0 w-100">
@@ -712,10 +756,8 @@
     const toastLiveExample = document.getElementById('liveToast')
 
     if (toastTrigger) {
-        console.log("1")
         const toastBootstrap = new bootstrap.Toast(toastLiveExample);
         toastTrigger.addEventListener('click', () => {
-            console.log("2")
             toastBootstrap.show()
         })
     }
@@ -823,13 +865,23 @@
 
 </script>
 <script>
-    var input = document.getElementById("search");
+    function myFunction() {
+        var input = document.getElementById('searchInput');
+        var filter = input.value.toUpperCase();
+        var column = document.getElementsByClassName("column");
 
-    input.addEventListener("keypress", function(event) {
-    if (event.key === "Enter") {
-        event.preventDefault();
-        document.getElementById("toSearch").click();
+        for (var i = 0; i < column.length; i++) {
+            var imageItem = column[i].getElementsByClassName('image-item');
+            for (var n = 0; n < imageItem.length; n++) {
+                var tag = imageItem[n].getElementsByTagName("small")[0];
+                var txtValue = tag.textContent || tag.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    imageItem[n].style.display = "";
+                } else {
+                    imageItem[n].style.display = "none";
+                }
+            }
+        }
     }
-    });
 </script>
 </html>

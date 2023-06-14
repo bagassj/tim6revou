@@ -103,16 +103,3 @@ body {
   border-radius: 10px;
 	background-color: rgba(33, 37, 41, 0.1);
 }
-
-#film{
-  display: "block" !important;
-}
-#nature{
-  display: "block" !important;
-}
-#animals{
-  display: "block" !important;
-}
-#travel{
-  display: "block" !important;
-}
