@@ -168,277 +168,89 @@
                         <button class="btn btn-primary rounded-pill text-nowrap ms-4" type="button" data-bs-toggle="modal" data-bs-target="#addPostModal"><i class="bi bi-plus-circle"></i><small> Add Post</small></button>
                     </div>
                 </nav>
-                <div class="image-gallery mt-2">
-                    <div class="column">
-                        <div class="image-item" id="">
-                            <img class="post-img" src="https://source.unsplash.com/UkrEP201nQI" data-bs-toggle="modal" data-bs-target="#postModal"/>
-                            <div class="overlay py-2 px-2">
-                                <div class="row g-0 w-100">
-                                    <div class="col-8 mr-auto">
-                                        <img class="profile-img rounded-circle" src="https://source.unsplash.com/VWcPlbHglYc" alt="" width="20" height="20">
-                                        <span class="ms-1">Joko</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-heart text-end"></i>
-                                        <span class="text-end"> 132</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-chat text-end"></i>
-                                        <span class="text-end"> 12</span>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="border border-1 rounded-2 px-4">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-4 nav flex-column nav-pills border border-start-0 border border-top-0 border border-bottom-0 py-3" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="min-height: 80vh;">
+                            <button class="nav-link active text-start text-dark" id="s-changePassword-tab" data-bs-toggle="pill" data-bs-target="#s-changePassword" type="button" role="tab" aria-controls="s-changePassword" aria-selected="true">Change Password</button>
+                            <button class="nav-link text-start text-dark" id="s-manageContacts-tab" data-bs-toggle="pill" data-bs-target="#s-manageContacts" type="button" role="tab" aria-controls="s-manageContacts" aria-selected="false">Manage contacts</button>
+                            <button class="nav-link text-start text-dark" id="s-accountPrivacy-tab" data-bs-toggle="pill" data-bs-target="#s-accountPrivacy" type="button" role="tab" aria-controls="s-accountPrivacy" aria-selected="false">Account privacy</button>
+                            <button class="nav-link text-start text-dark" id="s-help-tab" data-bs-toggle="pill" data-bs-target="#s-help" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Help</button>
                         </div>
-                        <div class="image-item" id="">
-                            <img class="post-img" src="https://source.unsplash.com/b4XT7nTUMOk" />
-                            <div class="overlay py-2 px-2">
-                                <div class="row g-0 w-100">
-                                    <div class="col-8 mr-auto">
-                                        <img class="profile-img rounded-circle" src="https://source.unsplash.com/VWcPlbHglYc" alt="" width="20" height="20">
-                                        <span class="ms-1">Joko</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-heart text-end"></i>
-                                        <span class="text-end"> 132</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-chat text-end"></i>
-                                        <span class="text-end"> 12</span>
-                                    </div>
-                                </div>
+                        <div class="col-1 vr bg-transparent"></div>
+                        <div class="col-7 tab-content d-flex align-items-center justify-content-center p-0 m-0 overflow-y-auto overflow-x-hidden scroll-style" id="v-pills-tabContent">
+                            <div class="tab-pane fade show active" id="s-changePassword" role="tabpanel" aria-labelledby="s-changePassword-tab" tabindex="0">
+                                <table class="table table-light table-borderless w-100 m-0">
+                                    <tbody>
+                                        <tr class="row border-0">
+                                            <td class="col-4 d-flex align-items-center justify-content-end">
+                                                <img class="rounded-circle" src="https://source.unsplash.com/Cb5A-Pgetl8" alt="" width="48" height="48" style="object-fit: cover;">
+                                            </td>
+                                            <td class="col-8 d-flex align-items-center">tim6revou</td>
+                                        </tr>
+                                        <tr class="row border-0">
+                                            <td class="col-4 d-flex align-items-center justify-content-end text-end lh-1">
+                                                <strong class="text-secondary">Old Password</strong>
+                                            </td>
+                                            <td class="col-8 d-flex align-items-center">
+                                                <input type="password" class="form-control">
+                                            </td>
+                                        </tr>
+                                        <tr class="row border-0">
+                                            <td class="col-4 d-flex align-items-center justify-content-end text-end lh-1">
+                                                <strong class="text-secondary">New Password</strong>
+                                            </td>
+                                            <td class="col-8 d-flex align-items-center">
+                                                <input type="password" class="form-control">
+                                            </td>
+                                        </tr>
+                                        <tr class="row border-0">
+                                            <td class="col-4 d-flex align-items-center justify-content-end text-end lh-1">
+                                                <strong class="text-secondary">Confirm New Password</strong>
+                                            </td>
+                                            <td class="col-8 d-flex align-items-center">
+                                                <input type="password" class="form-control">
+                                            </td>
+                                        </tr>
+                                        <tr class="row border-0">
+                                            <td class="col-4">
+                                            </td>
+                                            <td class="col-8 d-flex align-items-center">
+                                                <button type="button" class="btn btn-primary">Change Password</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                        </div>
-                        <div class="image-item" id="">
-                            <img class="post-img" src="https://source.unsplash.com/W42hOd3lyCU" />
-                            <div class="overlay py-2 px-2">
-                                <div class="row g-0 w-100">
-                                    <div class="col-8 mr-auto">
-                                        <img class="profile-img rounded-circle" src="https://source.unsplash.com/VWcPlbHglYc" alt="" width="20" height="20">
-                                        <span class="ms-1">Joko</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-heart text-end"></i>
-                                        <span class="text-end"> 132</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-chat text-end"></i>
-                                        <span class="text-end"> 12</span>
-                                    </div>
-                                </div>
+                            <div class="tab-pane fade" id="s-manageContacts" role="tabpanel" aria-labelledby="s-manageContacts-tab" tabindex="0">
+                                <h4 class="text-center">Manage Contacts</h4>
+                                <p class="mb-5">
+                                    The people listed here are contacts you've uploaded to Instagram. To remove your synced contacts, tap Delete all. Your contacts will be re-uploaded the next time Instagram syncs your contacts unless you go to your device settings and turn off access to contacts.
+                                    <br><br>
+                                    Only you can see your contacts, but Instagram uses the info you've uploaded about your contacts to make friend suggestions for you and others and to provide a better experience for everyone.
+                                </p>
+                                <strong>0 Synced Contacts</strong>
+                                <hr>
+                                <span>When you upload your contacts to Instagram, you'll see them here.</span>
+                                <hr>
+                                <button type="button" class="btn btn-primary">Change Password</button>
                             </div>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="image-item" id="">
-                            <img class="post-img" src="https://source.unsplash.com/Vg3l_fjmqXc" />
-                            <div class="overlay py-2 px-2">
-                                <div class="row g-0 w-100">
-                                    <div class="col-8 mr-auto">
-                                        <img class="profile-img rounded-circle" src="https://source.unsplash.com/VWcPlbHglYc" alt="" width="20" height="20">
-                                        <span class="ms-1">Joko</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-heart text-end"></i>
-                                        <span class="text-end"> 132</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-chat text-end"></i>
-                                        <span class="text-end"> 12</span>
-                                    </div>
-                                </div>
+                            <div class="tab-pane fade" id="s-accountPrivacy" role="tabpanel" aria-labelledby="s-accountPrivacy-tab" tabindex="0">
+                                <h4 class="text-center">Account privacy</h4>
+                                <strong>
+                                    <input type="checkbox"> Private account
+                                </strong>
+                                <p class="mb-5">
+                                    When your account is public, your profile and posts can be seen by anyone, on or off Instagram, even if they don't have an Instagram account.
+                                    <br><br>
+                                    When your account is private, only the followers you approve can see what you share, including your photos or videos on hashtag and location pages, and your followers and following lists.
+                                </p>
                             </div>
-                        </div>
-                        <div class="image-item" id="">
-                            <img class="post-img" src="https://source.unsplash.com/dF-vrbCACiU" />
-                            <div class="overlay py-2 px-2">
-                                <div class="row g-0 w-100">
-                                    <div class="col-8 mr-auto">
-                                        <img class="profile-img rounded-circle" src="https://source.unsplash.com/VWcPlbHglYc" alt="" width="20" height="20">
-                                        <span class="ms-1">Joko</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-heart text-end"></i>
-                                        <span class="text-end"> 132</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-chat text-end"></i>
-                                        <span class="text-end"> 12</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-item" id="">
-                            <img class="post-img" src="https://source.unsplash.com/Utb1XcAX9Fs" />
-                            <div class="overlay py-2 px-2">
-                                <div class="row g-0 w-100">
-                                    <div class="col-8 mr-auto">
-                                        <img class="profile-img rounded-circle" src="https://source.unsplash.com/VWcPlbHglYc" alt="" width="20" height="20">
-                                        <span class="ms-1">Joko</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-heart text-end"></i>
-                                        <span class="text-end"> 132</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-chat text-end"></i>
-                                        <span class="text-end"> 12</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-item" id="">
-                            <img class="post-img" src="https://source.unsplash.com/k4YUMbFGgYI" />
-                            <div class="overlay py-2 px-2">
-                                <div class="row g-0 w-100">
-                                    <div class="col-8 mr-auto">
-                                        <img class="profile-img rounded-circle" src="https://source.unsplash.com/VWcPlbHglYc" alt="" width="20" height="20">
-                                        <span class="ms-1">Joko</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-heart text-end"></i>
-                                        <span class="text-end"> 132</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-chat text-end"></i>
-                                        <span class="text-end"> 12</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="image-item" id="">
-                            <img class="post-img" src="https://source.unsplash.com/PNv0pESh9Uk" />
-                            <div class="overlay py-2 px-2">
-                                <div class="row g-0 w-100">
-                                    <div class="col-8 mr-auto">
-                                        <img class="profile-img rounded-circle" src="https://source.unsplash.com/VWcPlbHglYc" alt="" width="20" height="20">
-                                        <span class="ms-1">Joko</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-heart text-end"></i>
-                                        <span class="text-end"> 132</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-chat text-end"></i>
-                                        <span class="text-end"> 12</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-item" id="">
-                            <img class="post-img" src="https://source.unsplash.com/MWrI3Q1UVxM" />
-                            <div class="overlay py-2 px-2">
-                                <div class="row g-0 w-100">
-                                    <div class="col-8 mr-auto">
-                                        <img class="profile-img rounded-circle" src="https://source.unsplash.com/VWcPlbHglYc" alt="" width="20" height="20">
-                                        <span class="ms-1">Joko</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-heart text-end"></i>
-                                        <span class="text-end"> 132</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-chat text-end"></i>
-                                        <span class="text-end"> 12</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-item" id="">
-                            <img class="post-img" src="https://source.unsplash.com/7WYh2SndeXg" />
-                            <div class="overlay py-2 px-2">
-                                <div class="row g-0 w-100">
-                                    <div class="col-8 mr-auto">
-                                        <img class="profile-img rounded-circle" src="https://source.unsplash.com/VWcPlbHglYc" alt="" width="20" height="20">
-                                        <span class="ms-1">Joko</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-heart text-end"></i>
-                                        <span class="text-end"> 132</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-chat text-end"></i>
-                                        <span class="text-end"> 12</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-item" id="">
-                            <img class="post-img" src="https://source.unsplash.com/j3PUmGzYnAQ" />
-                            <div class="overlay py-2 px-2">
-                                <div class="row g-0 w-100">
-                                    <div class="col-8 mr-auto">
-                                        <img class="profile-img rounded-circle" src="https://source.unsplash.com/VWcPlbHglYc" alt="" width="20" height="20">
-                                        <span class="ms-1">Joko</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-heart text-end"></i>
-                                        <span class="text-end"> 132</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-chat text-end"></i>
-                                        <span class="text-end"> 12</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="image-item" id="">
-                            <img class="post-img" src="https://source.unsplash.com/J7kA2PVlh_A" />
-                            <div class="overlay py-2 px-2">
-                                <div class="row g-0 w-100">
-                                    <div class="col-8 mr-auto">
-                                        <img class="profile-img rounded-circle" src="https://source.unsplash.com/VWcPlbHglYc" alt="" width="20" height="20">
-                                        <span class="ms-1">Joko</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-heart text-end"></i>
-                                        <span class="text-end"> 132</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-chat text-end"></i>
-                                        <span class="text-end"> 12</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-item" id="">
-                            <img class="post-img" src="https://source.unsplash.com/r_hC5IgV1WU" />
-                            <div class="overlay py-2 px-2">
-                                <div class="row g-0 w-100">
-                                    <div class="col-8 mr-auto">
-                                        <img class="profile-img rounded-circle" src="https://source.unsplash.com/VWcPlbHglYc" alt="" width="20" height="20">
-                                        <span class="ms-1">Joko</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-heart text-end"></i>
-                                        <span class="text-end"> 132</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-chat text-end"></i>
-                                        <span class="text-end"> 12</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="image-item" id="">
-                            <img class="post-img" src="https://source.unsplash.com/3Y7AX1Z7eCg" />
-                            <div class="overlay py-2 px-2">
-                                <div class="row g-0 w-100">
-                                    <div class="col-8 mr-auto">
-                                        <img class="profile-img rounded-circle" src="https://source.unsplash.com/VWcPlbHglYc" alt="" width="20" height="20">
-                                        <span class="ms-1">Joko</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-heart text-end"></i>
-                                        <span class="text-end"> 132</span>
-                                    </div>
-                                    <div class="col-2 text-end">
-                                        <i class="bi bi-chat text-end"></i>
-                                        <span class="text-end"> 12</span>
-                                    </div>
+                            <div class="tab-pane fade w-100" id="s-help" role="tabpanel" aria-labelledby="s-help-tab" tabindex="0">
+                                <h4 class="text-center">Account privacy</h4>
+                                <div class="d-grid gap-2 mt-3">
+                                    <button class="btn d-flex justify-content-between px-0" type="button"><span>Help Center</span><i class="bi bi-chevron-right"></i></button>
+                                    <button class="btn d-flex justify-content-between px-0" type="button"><span>Privacy and Security Help</span><i class="bi bi-chevron-right"></i></button>
+                                    <button class="btn d-flex justify-content-between px-0" type="button"><span>Support Requests</span><i class="bi bi-chevron-right"></i></button>
                                 </div>
                             </div>
                         </div>

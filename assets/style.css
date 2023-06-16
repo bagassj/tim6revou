@@ -118,3 +118,6 @@ body {
   height: 1px;
   width: 43%;
 }
+.nav-pills > .active {
+  color: #fff !important;
+}
