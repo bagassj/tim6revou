@@ -68,10 +68,21 @@ body {
   cursor: pointer;
 }
 
+.impression{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(1);
+  display: flex;
+  align-items: start;
+  justify-content: start;
+}
+
 .overlay {
   position: absolute;
   width: 100%;
-  background: rgba(20, 20, 20, 0.85);
+  background: rgba(33, 37, 41, 0.9);
   border-radius: 0 0 8px 8px;
   bottom: 0;
   left: 0;
@@ -85,6 +96,9 @@ body {
 
 .image-item:hover .overlay {
   transform: scale(1);
+}
+.image-item:hover .impression {
+  transform: scale(0);
 }
 
 .toast{
