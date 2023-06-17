@@ -776,11 +776,11 @@
     var cssTravel = document.getElementsByClassName("travel");
     
     all.addEventListener("click", function() {
-        all.classList.add("btn-secondary");
-        film.classList.remove("btn-secondary");
-        nature.classList.remove("btn-secondary");
-        animal.classList.remove("btn-secondary");
-        travel.classList.remove("btn-secondary");
+        all.classList.add("btn-secondary","text-white");
+        film.classList.remove("btn-secondary","text-white");
+        nature.classList.remove("btn-secondary","text-white");
+        animal.classList.remove("btn-secondary","text-white");
+        travel.classList.remove("btn-secondary","text-white");
 
         for (var i = 0; i < cssFilm.length; i++) {
             cssFilm[i].style.display = 'block';
