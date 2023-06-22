@@ -135,3 +135,24 @@ body {
 .nav-pills > .active {
   color: #fff !important;
 }
+
+.btn-prim, .bg-prim{
+  background-color: #D25B18 !important;
+  color: white;
+}
+
+.btn-sec, .bg-sec{
+  background-color: #D58D65 !important;
+}
+
+.btn-sec:hover, .btn-outline-secondary:hover{
+  background: #D25B18 !important;
+}
+
+.orange.active{
+  background-color: #D25B18 !important;
+}
+
+.small{
+  font-size: .825em !important;
+}
